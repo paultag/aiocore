@@ -31,7 +31,7 @@ class EventService(Service):
 
     @asyncio.coroutine
     def send(self, message):
-        yield from self._queue.put(message)
+        return (yield from self._queue.put(message))
 
     @asyncio.coroutine
     def __call__(self):
