@@ -26,7 +26,7 @@ class EventService(Service):
         self._queue = asyncio.Queue()
 
     @asyncio.coroutine
-    def handle(self):
+    def handle(self, message):
         raise NotImplementedError("Not implemented")
 
     @asyncio.coroutine
